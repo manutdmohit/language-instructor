@@ -12,11 +12,14 @@ import {
   FaTimes,
 } from 'react-icons/fa';
 
+import { BiSolidContact } from 'react-icons/bi';
+
 const navItems = [
   { href: '/', label: 'Home', icon: FaHome },
   { href: '/courses', label: 'Courses', icon: FaBook },
   { href: '/testimonials', label: 'Testimonials', icon: FaComments },
   { href: '/about', label: 'About', icon: FaUser },
+  { href: '/contact', label: 'Contact', icon: BiSolidContact },
 ];
 
 export default function Navbar() {
