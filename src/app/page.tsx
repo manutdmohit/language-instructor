@@ -1,13 +1,9 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import Image from 'next/image';
-
-import Footer from '@/components/Footer';
-import Navbar from '@/components/Navbar';
 import { motion } from 'framer-motion';
 import { FaGraduationCap, FaPlane, FaChalkboardTeacher } from 'react-icons/fa';
 import Hero from '@/components/Hero';
+import CoursesOnly from '@/components/CoursesOnly';
 
 export default function Home() {
   return (
@@ -74,6 +70,17 @@ export default function Home() {
               <p>{text}</p>
             </motion.div>
           ))}
+        </section>
+
+        <section className="mt-8 mb-8 p-4 space-y-12 bg-white rounded-lg shadow-lg">
+          <motion.h2
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="text-3xl font-semibold mb-4"
+          >
+            Courses
+          </motion.h2>
+          <CoursesOnly />
         </section>
       </main>
     </div>

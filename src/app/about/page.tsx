@@ -167,8 +167,6 @@ export default function About() {
             ))}
           </ul>
         </motion.section>
-
-        {/* ... continue with the rest of the sections, applying similar animation techniques ... */}
       </main>
     </div>
   );

@@ -4,9 +4,11 @@ import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="bg-blue-800 text-white p-6 text-center mt-auto">
-      <p>© 2024 Korean Language Instructor. All rights reserved.</p>
+      <p>© {currentYear} Korean Language Instructor. All rights reserved.</p>
       <div className="flex justify-center mt-4 space-x-4">
         {[FaFacebook, FaTwitter, FaInstagram].map((Icon, index) => (
           <motion.a

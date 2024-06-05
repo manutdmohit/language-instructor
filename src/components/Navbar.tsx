@@ -39,7 +39,7 @@ export default function Navbar() {
     <nav className="bg-blue-700 p-4 sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/" className="text-white text-2xl font-bold">
-          KoreanPro
+          Karan Shahi
         </Link>
 
         {/* Desktop Menu */}
