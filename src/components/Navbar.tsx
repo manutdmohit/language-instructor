@@ -89,7 +89,7 @@ export default function Navbar() {
                     className="text-white text-2xl flex flex-col items-center hover:text-blue-200"
                     onClick={() => setIsOpen(false)}
                   >
-                    <Icon className="text-3xl mb-1" />
+                    <Icon className="text-2xl mb-1" />
                     <span>{label}</span>
                   </Link>
                 </motion.li>
