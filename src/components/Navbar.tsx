@@ -60,7 +60,7 @@ export default function Navbar() {
         {/* Mobile Menu Icon */}
         <button
           className="md:hidden text-white text-2xl"
-          onClick={() => setIsOpen(!isOpden)}
+          onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <FaTimes /> : <FaBars />}
         </button>
