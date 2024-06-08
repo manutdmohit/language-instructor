@@ -39,7 +39,7 @@ export default function Navbar() {
     <nav className="bg-blue-700 p-4 sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/" className="text-white text-2xl font-bold">
-          Karan Shahi
+          Karna Shahi
         </Link>
 
         {/* Desktop Menu */}
@@ -60,7 +60,7 @@ export default function Navbar() {
         {/* Mobile Menu Icon */}
         <button
           className="md:hidden text-white text-2xl"
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={() => setIsOpen(!isOpden)}
         >
           {isOpen ? <FaTimes /> : <FaBars />}
         </button>
