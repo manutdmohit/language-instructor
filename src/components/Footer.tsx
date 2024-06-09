@@ -19,7 +19,7 @@ export default function Footer() {
   return (
     <footer className="bg-blue-800 text-white p-6 text-center mt-auto">
       <p>
-        © {currentYear}, Karan Shahi, Korean Language Instructor. All rights
+        © {currentYear}, Karna Shahi, Korean Language Instructor. All rights
         reserved.
       </p>
       <Link href="tel:9749902198">
