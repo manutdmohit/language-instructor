@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { FaCommentDots } from 'react-icons/fa';
 
-const number = '+9779868551045';
+const number = '+9779749902198';
 
 const CallButton = () => {
   return (
