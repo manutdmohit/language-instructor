@@ -42,7 +42,7 @@ export default function About() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-gray-100 mb-8">
       <header className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20 md:py-32">
         <div className="container mx-auto text-center">
           <motion.div
@@ -53,7 +53,7 @@ export default function About() {
           >
             <Image
               src="/images/karanshahi.jpg"
-              alt="Sagar Sharma"
+              alt="Karna Shahi"
               width={200}
               height={200}
               className="rounded-full mx-auto mb-6 shadow-lg"
@@ -78,7 +78,7 @@ export default function About() {
               नमस्ते & 안녕하세요!
             </h1>
             <p className="text-xl md:text-2xl">
-              I'm Karan Shahi, Your Bridge Between Nepal and Korea
+              I'm Karna Shahi, Your Bridge Between Nepal and Korea
             </p>
           </motion.div>
         </div>
@@ -94,11 +94,12 @@ export default function About() {
             My Korean Language Journey
           </h2>
           <p className="text-lg leading-relaxed">
-            My fascination with Korea began during my college years in
-            Kathmandu. The allure of K-dramas and K-pop wasn't just
-            entertainment—it was a window into a vibrant culture. This spark led
-            me to Seoul, where I pursued my Master's in Korean Studies, living
-            between the serenity of Gyeongbokgung Palace and Gangnam's energy.
+            I always had a dream to go to a foreign country, and I was lucky
+            enough to have it fulfilled when I embarked on my journey to South
+            Korea. The vibrant culture, stunning landscapes, and warm
+            hospitality captured my heart from the moment I arrived. I worked
+            there for 6 years, thoroughly enjoying the dynamic work culture and
+            the opportunities it offered for personal and professional growth.
           </p>
         </motion.section>
 
@@ -115,12 +116,12 @@ export default function About() {
             {
               icon: FaGraduationCap,
               title: 'Qualifications',
-              text: "Master's, TOPIK 6, Certified Teacher",
+              text: 'TOPIK , Certified Teacher',
             },
             {
               icon: FaChalkboardTeacher,
               title: 'Experience',
-              text: "7 years in Seoul's top institutions",
+              text: '6 years work experience and 3 years teaching experience',
             },
             {
               icon: FaHeart,

@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { FormEvent } from 'react';
 import { motion } from 'framer-motion';
 import {
   FaEnvelope,
@@ -9,8 +9,10 @@ import {
   FaFacebook,
   FaTwitter,
   FaInstagram,
+  FaWhatsapp,
 } from 'react-icons/fa';
 import { useEffect, useState } from 'react';
+import { MdEmail } from 'react-icons/md';
 
 interface AnimatedIconProps {
   icon: React.ComponentType<any>;
@@ -28,8 +30,32 @@ const AnimatedIcon: React.FC<AnimatedIconProps> = ({
   );
 };
 
+interface FormData {
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+}
+
 export default function Contact() {
   const [isLoaded, setIsLoaded] = useState(false);
+
+  // State variable for form data
+  const [formData, setFormData] = useState<FormData>({
+    name: '',
+    email: '',
+    phone: '',
+    message: '',
+  });
+
+  // Define a function to handle form submission
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    alert('Message sent successfully');
+
+    // Clear form data
+    setFormData({ name: '', email: '', phone: '', message: '' });
+  };
 
   useEffect(() => {
     setIsLoaded(true);
@@ -74,7 +100,6 @@ export default function Contact() {
             look forward to hearing from you!
           </p>
         </motion.section>
-
         <motion.section
           className="grid grid-cols-1 md:grid-cols-3 gap-8"
           variants={{
@@ -88,17 +113,17 @@ export default function Contact() {
             {
               icon: FaEnvelope,
               title: 'Email',
-              text: 'karan@example.com',
+              text: 'shahikarna4444@gmail.com',
             },
             {
               icon: FaPhone,
               title: 'Phone',
-              text: '+123 456 7890',
+              text: '+977 974 9902198',
             },
             {
               icon: FaMapMarkerAlt,
               title: 'Location',
-              text: '123 Seoul St, Kathmandu, Nepal',
+              text: 'Tikapur, Kailali',
             },
           ].map(({ icon, title, text }, index) => (
             <motion.div
@@ -112,7 +137,6 @@ export default function Contact() {
             </motion.div>
           ))}
         </motion.section>
-
         <motion.section
           variants={fadeInUp}
           initial="hidden"
@@ -125,7 +149,10 @@ export default function Contact() {
             Please fill out the form below with your name, email, subject, and
             message. I will get back to you as soon as possible.
           </p>
-          <form className="bg-white p-6 rounded-lg shadow-md space-y-4">
+          <form
+            className="bg-white p-6 rounded-lg shadow-md space-y-4"
+            onSubmit={handleSubmit}
+          >
             <div>
               <label
                 htmlFor="name"
@@ -137,6 +164,11 @@ export default function Contact() {
                 type="text"
                 id="name"
                 className="mt-1 p-2 border border-gray-300 rounded w-full"
+                required
+                value={formData.name}
+                onChange={(e) =>
+                  setFormData({ ...formData, name: e.target.value })
+                }
               />
             </div>
             <div>
@@ -150,19 +182,28 @@ export default function Contact() {
                 type="email"
                 id="email"
                 className="mt-1 p-2 border border-gray-300 rounded w-full"
+                required
+                value={formData.email}
+                onChange={(e) =>
+                  setFormData({ ...formData, email: e.target.value })
+                }
               />
             </div>
             <div>
               <label
-                htmlFor="subject"
+                htmlFor="phone"
                 className="block text-sm font-medium text-gray-700"
               >
-                Subject
+                Phone
               </label>
               <input
                 type="text"
-                id="subject"
+                id="phone"
                 className="mt-1 p-2 border border-gray-300 rounded w-full"
+                value={formData.phone}
+                onChange={(e) =>
+                  setFormData({ ...formData, phone: e.target.value })
+                }
               />
             </div>
             <div>
@@ -176,6 +217,10 @@ export default function Contact() {
                 id="message"
                 className="mt-1 p-2 border border-gray-300 rounded w-full"
                 rows={4}
+                value={formData.message}
+                onChange={(e) =>
+                  setFormData({ ...formData, message: e.target.value })
+                }
               ></textarea>
             </div>
             <button
@@ -186,8 +231,8 @@ export default function Contact() {
             </button>
           </form>
         </motion.section>
-
-        <motion.section
+        ;
+        {/* <motion.section
           variants={fadeInUp}
           initial="hidden"
           animate={isLoaded ? 'visible' : 'hidden'}
@@ -204,8 +249,7 @@ export default function Contact() {
             <li>Saturday: 10:00 AM - 4:00 PM</li>
             <li>Sunday: Closed</li>
           </ul>
-        </motion.section>
-
+        </motion.section> */}
         <motion.section
           variants={fadeInUp}
           initial="hidden"
@@ -220,9 +264,15 @@ export default function Contact() {
           </p>
           <div className="flex space-x-4 justify-center">
             {[
-              { icon: FaFacebook, link: 'https://www.facebook.com' },
-              { icon: FaTwitter, link: 'https://www.twitter.com' },
-              { icon: FaInstagram, link: 'https://www.instagram.com' },
+              {
+                icon: FaFacebook,
+                link: 'https://https://www.facebook.com/rumesh.shshi',
+              },
+              { icon: FaWhatsapp, link: 'https://wa.me/+9779749902198' },
+              {
+                icon: MdEmail,
+                link: 'mailto: shahikarna4444@gmail.com',
+              },
             ].map(({ icon, link }, index) => (
               <a
                 key={index}
@@ -236,8 +286,7 @@ export default function Contact() {
             ))}
           </div>
         </motion.section>
-
-        <motion.section
+        {/* <motion.section
           variants={fadeInUp}
           initial="hidden"
           animate={isLoaded ? 'visible' : 'hidden'}
@@ -247,8 +296,7 @@ export default function Contact() {
             Have questions? Check out the FAQ section for quick answers to
             common questions.
           </p>
-        </motion.section>
-
+        </motion.section> */}
         <motion.section
           variants={fadeInUp}
           initial="hidden"

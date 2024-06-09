@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FaGraduationCap, FaPlane, FaChalkboardTeacher } from 'react-icons/fa';
+import { FaNetworkWired, FaPlane, FaChalkboardTeacher } from 'react-icons/fa';
 import Hero from '@/components/Hero';
 import CoursesOnly from '@/components/CoursesOnly';
 
@@ -34,23 +34,26 @@ export default function Home() {
             animate={{ opacity: 1, x: 0 }}
             className="text-lg"
           >
-            I'm a passionate Korean language instructor with years of experience
-            teaching in Korea. Now, I'm back in my home country, Nepal, sharing
-            my expertise and cultural insights.
+            Dreaming of a future in South Korea? It's an amazing destination for
+            work or study, where you can earn between 2.5 to 3 Lakhs Nrs. Hi, I
+            am Karna Shahi, let me be your guide! I'm a passionate Korean
+            language instructor with years of teaching experience across Nepal's
+            vibrant cities. My mission is to share my expertise and cultural
+            wisdom to help you succeed in your Korean journey.
           </motion.p>
         </section>
 
         <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
             {
-              icon: FaGraduationCap,
-              title: 'Education',
-              text: "Master's in Korean Studies",
+              icon: FaNetworkWired,
+              title: 'Work Experience',
+              text: '6 years',
             },
             {
               icon: FaPlane,
-              title: 'Experience',
-              text: '5 years teaching in Seoul',
+              title: 'Teaching Experience',
+              text: '3 years',
             },
             {
               icon: FaChalkboardTeacher,

@@ -52,17 +52,18 @@ const Hero = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.5, type: 'spring', stiffness: 50 }}
         >
-          From Seoul to Kathmandu
+          From Nepal to South Korea
         </motion.h2>
         <motion.p
-          className="text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto drop-shadow-lg"
+          className="text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto drop-shadow-lg text-left"
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.7, type: 'spring', stiffness: 50 }}
         >
-          With years of experience teaching in the heart of Seoul, I bring the
-          essence of Korean language and culture back to my home in Nepal. Join
-          me on this unique language journey.
+          With 6 years of stay in South Korea and more than 3 years of
+          experience as a teacher in various cities of Nepal experience, I bring
+          the essence of Korean language and culture back to my home in Nepal.
+          Join me on this unique language journey.
         </motion.p>
         <motion.button
           className="mt-8 px-8 py-3 bg-blue-600 text-white rounded-full text-lg font-semibold hover:bg-blue-700 transition shadow-lg"
