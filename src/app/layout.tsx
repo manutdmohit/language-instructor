@@ -9,7 +9,7 @@ import CallButton from '@/components/CallButton';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Karna Shahi',
+  title: 'Karna Shahi, Korean Language Instructor',
   description: 'Korean Language Instructor',
 };
 
