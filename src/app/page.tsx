@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { FaNetworkWired, FaPlane, FaChalkboardTeacher } from 'react-icons/fa';
 import Hero from '@/components/Hero';
 import CoursesOnly from '@/components/CoursesOnly';
+import ImageCarousel from '@/components/ImageCarousel';
 
 export default function Home() {
   return (
@@ -86,6 +87,8 @@ export default function Home() {
           <CoursesOnly />
         </section>
       </main>
+
+      <ImageCarousel />
     </div>
   );
 }
